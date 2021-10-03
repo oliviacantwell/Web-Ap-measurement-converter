@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style = "margin: auto; width: 100%; text-align: center;">
+    <form action="add">
+    <select name="type1" method = 'post' style = "margin: 15px;">
+        <option disabled='true' selected>-- Select Metric Measurement --</option>
+        <option value = 'mi'>millimeters</option>
+        <option value = 'ce'>centimeters</option>
+        <option value = 'me'>meters</option>
+    </select>
+
+
+    to
+
+    <select name="type2" method = "post" style = "margin: 15px;">
+        <option disabled='true' selected>-- Select Standard Measurement --</option>
+        <option value = 'in'>inches</option>
+        <option value = 'fe'>feet</option>
+        <option value = 'ya'>yard</option>
+    </select>
+        <br>
+        <div style = "margin-left: -13%;">
+        Enter metric # : <input type='text' name="num1" style = "margin: 5px;"><br>
+        <input type="submit" style = "margin: 5px; ">
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+<h3>{{result}}</h3>
